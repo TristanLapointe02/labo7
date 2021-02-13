@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(40, 190, 238);
+}
+
+body.home::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: aliceblue;
+    clip-path: polygon(100% 66%, 72% 100%, 100% 100%);
+        @include media-desktop {
+            clip-path: polygon(89% 0, 100% 0, 100% 100%, 64% 100%);
+        }
+}
+
+#page {
+    margin: 0 2rem 0 2rem;
+}
+
+.side-title {
+    font-size:  clamp(1.2rem, #{"-0.875rem + 8.333vw"}, 4rem);
+    margin-bottom: 0;
+    a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+.site-description {
+    font-size:  clamp(.9rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
+    margin-top: 0;
+}
+
+.accueil {
+    font-size: 2rem;
+}
