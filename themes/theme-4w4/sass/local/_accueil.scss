@@ -22,23 +22,31 @@ body.home::after {
 }
 
 #page {
-    margin: 0 2rem 0 2rem;
+    //margin: 0 2rem 0 2rem;
 }
 
-.side-title {
-    font-size:  clamp(1.2rem, #{"-0.875rem + 8.333vw"}, 4rem);
+.site-title {
+    font-family: $font__title;
+    font-size:  clamp(1.5rem, #{"-0.875rem + 8.333vw"}, 3.5rem);
     margin-bottom: 0;
     a {
-        text-decoration: none;
         font-weight: bold;
+        text-decoration: none;
     }
+    
 }
 
 .site-description {
-    font-size:  clamp(.9rem, #{"-0.875rem + 8.333vw"}, 1.5rem);
+    font-family: $font__title;
+    font-size:  clamp(1rem, #{"-0.875rem + 8.333vw"}, 3.5rem);
     margin-top: 0;
+    color: #003;
 }
 
 .accueil {
-    font-size: 2rem;
+    font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 1.7rem);
+
+    ul {
+        list-style-type: none;
+    }
 }

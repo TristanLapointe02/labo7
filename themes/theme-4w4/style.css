@@ -537,6 +537,46 @@ a:hover, a:active {
   outline: 0;
 }
 
+.main-navigation a {
+  color: #c9dd57;
+}
+
+.main-navigation a:visited {
+  color: #dbb343;
+}
+
+.main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+  color: #f0efbc;
+}
+
+.main-navigation a:focus {
+  outline: thin dotted;
+}
+
+.main-navigation a:hover, .main-navigation a:active {
+  outline: 0;
+}
+
+.site-title a {
+  color: #2843d8;
+}
+
+.site-title a:visited {
+  color: #151c7c;
+}
+
+.site-title a:hover, .site-title a:focus, .site-title a:active {
+  color: #30bbce;
+}
+
+.site-title a:focus {
+  outline: thin dotted;
+}
+
+.site-title a:hover, .site-title a:active {
+  outline: 0;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -621,6 +661,28 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.no-sidebar .site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/* 
+	#page = .site
+		#masthead - .site-header
+			.site-branding
+				.site-title
+				.site-description
+			#site-navigation - .main-navigation
+		#primary - .site-main
+		#secondary - widget-area
+		#colophon - .site-footer
+
+*/
+.site-branding, #primary, #colophon {
+  margin-left: 3rem;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -636,6 +698,9 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
+  background-color: #006;
+  position: absolute;
+  width: 100%;
 }
 
 .main-navigation ul ul {
@@ -660,6 +725,7 @@ textarea {
 
 .main-navigation ul ul a {
   width: 200px;
+  margin-left: 3rem;
 }
 
 .main-navigation ul li:hover > ul,
@@ -674,6 +740,34 @@ textarea {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  margin-left: 2.25rem;
+}
+
+/* BOUTON BURGER */
+.menu-toggle {
+  padding: 0rem;
+  border: 0;
+  margin-left: 3rem;
+  transition: transform .2s;
+  transform: rotate(0);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background: #ffffff;
+}
+
+.menu-toggle:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.menu-toggle:active {
+  transform: scale(0.95);
+}
+
+.main-navigation.toggled .menu-toggle {
+  transform: rotate(90deg);
 }
 
 /* Small menu. */
@@ -682,12 +776,20 @@ textarea {
   display: block;
 }
 
+/* VERSION TABLETTE */
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
   }
+  .main-navigation a {
+    margin-left: 0rem;
+  }
   .main-navigation ul {
     display: flex;
+    height: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    position: static;
   }
 }
 
@@ -963,26 +1065,29 @@ body.home::after {
   }
 }
 
-#page {
-  margin: 0 2rem 0 2rem;
-}
-
-.side-title {
-  font-size: clamp(1.2rem, -0.875rem + 8.333vw, 4rem);
+.site-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.5rem, -0.875rem + 8.333vw, 3.5rem);
   margin-bottom: 0;
 }
 
-.side-title a {
-  text-decoration: none;
+.site-title a {
   font-weight: bold;
+  text-decoration: none;
 }
 
 .site-description {
-  font-size: clamp(0.9rem, -0.875rem + 8.333vw, 1.5rem);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
   margin-top: 0;
+  color: #003;
 }
 
 .accueil {
-  font-size: 2rem;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.7rem);
+}
+
+.accueil ul {
+  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */
