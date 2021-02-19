@@ -7,7 +7,7 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: #006;
+		background-color: rgb(8, 85, 55);
 		position: absolute;
 		width: 100%;
 
@@ -82,15 +82,16 @@
 	margin-left: 3rem;
 	transition: transform .2s;
 	transform: rotate(0);
+	background-color: #a8a026;
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-    background: #ffffff;
+    background-color: #d3cb59;
 }
 
 .menu-toggle:focus {
-	outline: 1px solid #fff;
+	outline: none;
     outline-offset: -4px;
 }
 

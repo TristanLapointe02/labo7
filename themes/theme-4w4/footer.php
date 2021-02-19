@@ -19,10 +19,10 @@
 				//printf( esc_html__( 'Proudly powered by %s', 'theme-4w4' ), 'WordPress' );
 				?>
 			</a>
-			<span class="sep"> | </span>
+			<span class="sep"></span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'theme-4w4' ), 'theme-4w4', '<a href="http://referenced.ca">Tristan Lapointe</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'theme-4w4' ), 'theme-4w4', '<a href="http://referenced.ca">Tristan Lapointe |</a>');
 				?>
 			<a href="https//cmaisonneuve.qc.ca">Collège de Maisonneuve</a>
 		</div><!-- .site-info -->
