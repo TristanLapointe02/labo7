@@ -65,9 +65,9 @@
 		?>
 		
 		<section class="carrousel">
-			<div>1</div>
-			<div>2</div>
-			<div>3</div>
+			<div>Techniques</div>
+			<div>d'intégration</div>
+			<div>multimédia</div>
 		</section>
 		<div id="boutonsSlider">
 			<button id='un'>1</button>
