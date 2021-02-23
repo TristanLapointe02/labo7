@@ -661,6 +661,10 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+}
+
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -791,6 +795,7 @@ textarea {
     justify-content: space-around;
     align-items: center;
     position: static;
+    width: 100vw;
   }
 }
 
@@ -1038,7 +1043,7 @@ textarea {
   margin-bottom: 1.5em;
 }
 
-/* Local
+/* Local / Accueil
 --------------------------------------------- */
 body {
   margin: 0;
@@ -1118,5 +1123,34 @@ body.home::after {
   .accueil figure {
     margin: 0;
   }
+}
+
+/* Local / Carrousel
+--------------------------------------------- */
+.carrousel {
+  display: flex;
+  width: 300vw;
+  height: 20vh;
+  transition: transform .5s;
+}
+
+.carrousel div {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6em;
+}
+
+.carrousel div:nth-of-type(1) {
+  background-color: #4de955;
+}
+
+.carrousel div:nth-of-type(2) {
+  background-color: #e45e5e;
+}
+
+.carrousel div:nth-of-type(3) {
+  background-color: #5bdbdb;
 }
 /*# sourceMappingURL=style.css.map */
