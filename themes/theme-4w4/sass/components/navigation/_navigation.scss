@@ -1,6 +1,6 @@
 .main-navigation {
 	display: block;
-	width: 100%;
+	width: 100vw;
 
 	ul {
 		display: none;
@@ -77,17 +77,10 @@
 /* BOUTON BURGER */
 
 .menu-toggle {
-	padding: 0rem;
+	padding: 0;
+	margin: 0;
 	border: 0;
-	margin-left: 3rem;
-	transition: transform .2s;
-	transform: rotate(0);
-	background-color: #a8a026;
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-    background-color: #d3cb59;
+	background-color: transparent;
 }
 
 .menu-toggle:focus {
@@ -99,21 +92,27 @@
     transform: scale(0.95);
 }
 
-.main-navigation.toggled .menu-toggle {
-	transform: rotate(90deg);
-}
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	
+}
+
+.main-navigation ul {
+	z-index: 10;
+}
+
+.main-navigation.toggled ul li{
+	margin-top: 6px;
+	margin-bottom: 6px;
 }
 
 /* VERSION TABLETTE */
 @media screen and (min-width: 37.5em) {
 
-	.menu-toggle {
-		display: none;
+	#burger {
+		display: none !important;
 	}
 
 	.main-navigation {

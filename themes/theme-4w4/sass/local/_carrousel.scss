@@ -1,4 +1,5 @@
 .carrousel {
+    z-index: -100;
     display: flex;
     width: 300vw;
     height: 20vh;
@@ -9,7 +10,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 6em;
+            font-size: clamp(2.25rem, #{"-0.875rem + 5.5vw"}, 4.5rem);
         &:nth-of-type(1) {
             background-color: rgb(77, 233, 85);
         }
@@ -25,10 +26,14 @@
 
 
 #boutonsSlider {
+    z-index: -100;
     display: flex;
     justify-content: center;
     width: 100vw;
     background-color: aquamarine;
+    box-shadow: 1px -1px 43px 3px rgba(0,0,0,0.49);
+-webkit-box-shadow: 1px -1px 43px 3px rgba(0,0,0,0.49);
+-moz-box-shadow: 1px -1px 43px 3px rgba(0,0,0,0.49);
     
 }
 
@@ -53,32 +58,3 @@
 #boutonsSlider button:active {
     transform: scale(.5);
 }
-
-/*
-.menu-toggle {
-	padding: 0rem;
-	border: 0;
-	margin-left: 3rem;
-	transition: transform .2s;
-	transform: rotate(0);
-	background-color: #a8a026;
-}
-
-.menu-toggle:hover,
-.menu-toggle:focus {
-    background-color: #d3cb59;
-}
-
-.menu-toggle:focus {
-	outline: none;
-    outline-offset: -4px;
-}
-
-.menu-toggle:active {
-    transform: scale(0.95);
-}
-
-.main-navigation.toggled .menu-toggle {
-	transform: rotate(90deg);
-}*/
-

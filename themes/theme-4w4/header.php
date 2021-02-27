@@ -48,7 +48,11 @@
 		
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img src="https://s2.svgbox.net/hero-solid.svg?ic=menu&color=363833" width="32" height="32"></button>
+			<button id="burger" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<div></div>
+        	<div></div>
+        	<div></div>
+			</button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -58,6 +62,7 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
 
 		<!-- Début du carrousel -->
 		<?php
