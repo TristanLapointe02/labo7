@@ -721,6 +721,7 @@ body {
   top: 100%;
   left: -999em;
   z-index: 99999;
+  background-color: #00461b;
 }
 
 .main-navigation ul ul ul {
@@ -801,6 +802,22 @@ body {
     align-items: center;
     position: static;
     width: 100vw;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+  }
+  .main-navigation ul ul {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #00461b;
+  }
+  .main-navigation ul ul li {
+    margin-left: -40px;
+    width: auto;
+    padding: 7.5px;
   }
 }
 
