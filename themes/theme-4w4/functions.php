@@ -171,6 +171,17 @@ function theme_4w4_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_4w4_scripts' );
 
+function extraire_cours_front_page($query){
+	if( !is_admin() && $query->is_front_page() && $query->is_main_query() ){
+
+	$query->set( 'category_name', 'cours' );
+	$query->set('posts_per_page', -1 );
+	$query->set('orderby', 'title');
+	$query->set('order', 'asc');
+}
+}
+add_action('pre_get_posts','extraire_cours_front_page');
+
 /**
  * Implement the Custom Header feature.
  */

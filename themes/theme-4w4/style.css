@@ -702,125 +702,143 @@ body {
 .main-navigation {
   display: block;
   width: 100vw;
+  /* nav-menu (ul principal) */
+}
+
+.main-navigation #burger {
+  background-color: transparent;
 }
 
 .main-navigation ul {
   display: none;
+  position: absolute;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: #085537;
-  position: absolute;
-  width: 100%;
+  background-color: #000;
+  text-align: left;
+  left: 0;
+  /* sub-menu */
 }
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
+  background-color: #00461b;
   position: absolute;
   top: 100%;
+  transition: left .3s;
   left: -999em;
   z-index: 99999;
-  background-color: #00461b;
-}
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  display: block;
-  left: auto;
 }
 
 .main-navigation ul ul a {
-  width: 200px;
-  margin-left: 3rem;
+  width: 100%;
+  padding-left: 20px;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  left: 0;
+  background-color: #00461b;
+}
+
+.main-navigation ul li > a[href="#"]::after {
+  content: "+";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 90%;
+  right: 0;
+}
+
+.main-navigation ul li.focus > a[href="#"]::after,
+.main-navigation ul li > a[href="#"]:hover::after {
+  content: "-";
 }
 
 .main-navigation li {
   position: relative;
+  flex: 1;
 }
 
 .main-navigation a {
   display: block;
   text-decoration: none;
-  margin-left: 2.25rem;
+  padding: .5rem;
 }
 
-/* BOUTON BURGER */
+/* fin de main-navigation */
+/* -----------------------------------------------------------------------------
+Bouton burger 
+------------------------------------------------------------------------------*/
 .menu-toggle {
   padding: 0;
-  margin: 0;
   border: 0;
-  background-color: transparent;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background: #fafbfc;
 }
 
 .menu-toggle:focus {
-  outline: none;
+  outline: 1px solid #fff;
   outline-offset: -4px;
 }
 
 .menu-toggle:active {
-  transform: scale(0.95);
+  transform: scale(0.99);
 }
 
-/* Small menu. */
+/*
+.main-navigation.toggled .menu-toggle{
+	transform : rotate(90deg);
+}
+*/
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
-.main-navigation ul {
-  z-index: 10;
-}
-
-.main-navigation.toggled ul li {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-/* VERSION TABLETTE */
+/* ---------------------------------------------------------------------------
+menu tablette
+------------------------------------------------------------------------------ */
 @media screen and (min-width: 37.5em) {
   #burger {
     display: none !important;
   }
-  .main-navigation a {
-    margin-left: 0rem;
+  .menu-toggle {
+    display: none;
   }
+  .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
-    height: 2rem;
-    justify-content: space-around;
-    align-items: center;
     position: static;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    border: 1px solid black;
+    justify-content: space-around;
   }
-  .main-navigation ul ul {
+  .main-navigation.toggled ul a[href="#"]::after,
+  .main-navigation ul a[href="#"]::after {
+    display: none;
+  }
+  .main-navigation.toggled ul li:hover ul,
+  .main-navigation ul li:hover ul {
+    display: block;
     position: absolute;
     width: 250px;
     height: auto;
-    display: flex;
-    flex-direction: column;
     background-color: #00461b;
   }
-  .main-navigation ul ul li {
-    margin-left: -40px;
-    width: auto;
-    padding: 7.5px;
+  .main-navigation.toggled ul ul,
+  .main-navigation ul ul {
+    display: none;
   }
 }
 
+/* ------------------------------------------------------
+------------------------------------------------------- */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -1358,5 +1376,21 @@ Bouton burger
 .main-navigation.toggled ul {
   transform-origin: top;
   animation: menuOuvrir .5s both;
+}
+
+/* Local / Cours
+--------------------------------------------- */
+.site-main p {
+  margin-bottom: 0;
+  margin-left: 35px;
+}
+
+.site-main h4 {
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  width: 100px;
+  background-color: gainsboro;
+  border-radius: 40px;
 }
 /*# sourceMappingURL=style.css.map */
