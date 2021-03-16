@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(129, 233, 129);
+    background-color: rgb(129, 155, 129);
       
 }
 
@@ -63,7 +63,7 @@ body.home::after {
     margin-bottom: 2.5vw;
     color: rgb(0, 51, 17);
 }
-
+/*
 .accueil {
     font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 1.7rem);
 
@@ -89,3 +89,92 @@ body.home::after {
     }
     
 }
+*/
+
+.list-cours {
+    display:flex;
+    flex-direction: column;
+
+    h1 {
+        text-align: center;
+        background-color: rgb(17, 19, 17);
+        padding: 15px 0;
+        color: whitesmoke;
+        letter-spacing: 2px;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        article {
+            background-color: rgb(163, 206, 154);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 85%;
+            @include media-desktop {
+                width: 30%;
+            }
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            margin: 1%;
+            
+            p {
+                font-size: .9rem;
+                font-weight: bold;
+            }
+            a {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+                text-align: center;
+                background-color: rgb(154, 190, 146);
+                width: 100%;
+                padding: 10px 0;
+            }
+        } //Fin Article
+
+        // Type de cours - Changement de style
+        .Web {
+            background-color: rgb(179, 199, 63);
+
+            a {
+                background-color: rgb(155, 172, 61);
+            }
+        }
+
+        .Spécifique {
+            background-color: rgb(230, 142, 142);
+
+            a {
+                background-color: rgb(194, 134, 134);
+            }
+        }
+
+        .Jeu {
+            background-color: rgb(202, 162, 86);
+
+            a {
+                background-color: rgb(206, 169, 102);
+            }
+        }
+
+        .Image {
+            //Couleurs par défaut
+        }
+
+        .Conception {
+            background-color: rgb(228, 140, 225);
+
+            a {
+                background-color: rgb(202, 142, 200);
+            }
+        }
+    } //Fin Section
+}
+

@@ -519,15 +519,15 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #157c15;
 }
 
 a:visited {
-  color: #800080;
+  color: #103d08;
 }
 
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #176414;
 }
 
 a:focus {
@@ -539,15 +539,15 @@ a:hover, a:active {
 }
 
 .main-navigation a {
-  color: #c9dd57;
+  color: #72dd57;
 }
 
 .main-navigation a:visited {
-  color: #dbb343;
+  color: #88ce7f;
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
-  color: #f0efbc;
+  color: #c6f0bc;
 }
 
 .main-navigation a:focus {
@@ -559,15 +559,15 @@ a:hover, a:active {
 }
 
 .site-title a {
-  color: #91880c;
+  color: #2e4b28;
 }
 
 .site-title a:visited {
-  color: #91880c;
+  color: #1e3019;
 }
 
 .site-title a:hover, .site-title a:focus, .site-title a:active {
-  color: #f7f302;
+  color: #0f550f;
 }
 
 .site-title a:focus {
@@ -1088,7 +1088,7 @@ menu tablette
 body {
   margin: 0;
   padding: 0;
-  background-color: #81e981;
+  background-color: #819b81;
 }
 
 body.home {
@@ -1150,30 +1150,117 @@ body.home::after {
   color: #003311;
 }
 
+/*
 .accueil {
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.7rem);
+    font-size: clamp(0.8rem, -0.875rem + 8.333vw, 1.7rem);
+
+    ul {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1.75em;
+        
+    }
+
+    figure {
+        margin: 0;
+        margin-top: 5vw;
+
+        @include media-desktop {
+            margin: 0;
+        }
+    }
+    
+}
+*/
+.list-cours {
+  display: flex;
+  flex-direction: column;
 }
 
-.accueil ul {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.list-cours h1 {
+  text-align: center;
+  background-color: #111311;
+  padding: 15px 0;
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+.list-cours section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-cours section article {
+  background-color: #a3ce9a;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 1.75em;
-}
-
-.accueil figure {
-  margin: 0;
-  margin-top: 5vw;
+  align-items: center;
+  width: 85%;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  margin: 1%;
 }
 
 @media (min-width: 800px) {
-  .accueil figure {
-    margin: 0;
+  .list-cours section article {
+    width: 30%;
   }
+}
+
+.list-cours section article p {
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.list-cours section article a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background-color: #9abe92;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.list-cours section .Web {
+  background-color: #b3c73f;
+}
+
+.list-cours section .Web a {
+  background-color: #9bac3d;
+}
+
+.list-cours section .Spécifique {
+  background-color: #e68e8e;
+}
+
+.list-cours section .Spécifique a {
+  background-color: #c28686;
+}
+
+.list-cours section .Jeu {
+  background-color: #caa256;
+}
+
+.list-cours section .Jeu a {
+  background-color: #cea966;
+}
+
+.list-cours section .Conception {
+  background-color: #e48ce1;
+}
+
+.list-cours section .Conception a {
+  background-color: #ca8ec8;
 }
 
 /* Local / Carrousel
@@ -1195,15 +1282,15 @@ body.home::after {
 }
 
 .carrousel div:nth-of-type(1) {
-  background-color: #4de955;
+  background-color: #d5e4d6;
 }
 
 .carrousel div:nth-of-type(2) {
-  background-color: #e45e5e;
+  background-color: #aae285;
 }
 
 .carrousel div:nth-of-type(3) {
-  background-color: #5bdbdb;
+  background-color: #66cf5c;
 }
 
 #boutonsSlider {
@@ -1211,7 +1298,7 @@ body.home::after {
   display: flex;
   justify-content: center;
   width: 100vw;
-  background-color: aquamarine;
+  background-color: #cbf7c0;
   box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
   -webkit-box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
@@ -1380,17 +1467,19 @@ Bouton burger
 
 /* Local / Cours
 --------------------------------------------- */
-.site-main p {
-  margin-bottom: 0;
-  margin-left: 35px;
-}
+.site-main {
+  /* p{
+        margin-bottom: 0;
+        margin-left: 35px;
+    }
 
-.site-main h4 {
-  display: flex;
-  justify-content: center;
-  margin-left: 15px;
-  width: 100px;
-  background-color: gainsboro;
-  border-radius: 40px;
+    h4 {
+        display: flex;
+        justify-content: center;
+        margin-left: 15px;
+        width: 100px;
+        background-color: gainsboro;
+        border-radius: 40px;
+    }*/
 }
 /*# sourceMappingURL=style.css.map */
