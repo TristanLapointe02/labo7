@@ -1167,7 +1167,7 @@ body.home::after {
 .list-cours h1 p {
   margin: 0;
   padding: 0;
-  animation: texte-bouge 1.5s ease-in-out infinite alternate;
+  animation: texte-bouge 2.5s ease-in-out infinite alternate;
 }
 
 .list-cours section {
@@ -1288,9 +1288,11 @@ body.home::after {
 
 .carrousel div p {
   margin: 0;
-  background-color: aqua;
+  background-color: #222525;
   width: 100%;
+  color: white;
   text-align: center;
+  animation: fond-adapater 2.5s ease-in-out infinite alternate;
 }
 
 #boutonsSlider {
@@ -1324,6 +1326,21 @@ body.home::after {
 
 #boutonsSlider button:active {
   transform: scale(0.5);
+}
+
+@keyframes fond-adapater {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  35% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  65% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
 }
 
 /* Local / Burger
@@ -1468,18 +1485,9 @@ Bouton burger
 /* Local / Cours
 --------------------------------------------- */
 .site-main {
-  /* p{
+  /*p{
         margin-bottom: 0;
         margin-left: 35px;
-    }
-
-    h4 {
-        display: flex;
-        justify-content: center;
-        margin-left: 15px;
-        width: 100px;
-        background-color: gainsboro;
-        border-radius: 40px;
     }*/
 }
 /*# sourceMappingURL=style.css.map */

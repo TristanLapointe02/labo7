@@ -25,10 +25,14 @@
 
         p {
             margin: 0;
-            background-color: aqua;
+            background-color: rgb(34, 37, 37);
             width: 100%;
+            color: white;
             text-align: center;
-            
+            animation: fond-adapater 2.5s ease-in-out infinite alternate;
+            //
+            //
+            //
         }
     }
 
@@ -67,4 +71,22 @@
 
 #boutonsSlider button:active {
     transform: scale(.5);
+}
+
+@keyframes fond-adapater {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+
+    35% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    65% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
 }
