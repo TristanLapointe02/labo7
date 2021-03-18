@@ -31,7 +31,7 @@ get_header();
 						<?php if($precedent != "XXXXXX"): ?>
 							</section>
 						<?php endif ?>
-						<h1><?php echo $typeCours ?></h1>
+						<h1><p><?php echo $typeCours ?></p></h1>
 					<section>
 						
 					<?php endif?>

@@ -63,33 +63,6 @@ body.home::after {
     margin-bottom: 2.5vw;
     color: rgb(0, 51, 17);
 }
-/*
-.accueil {
-    font-size: clamp(0.8rem, #{"-0.875rem + 8.333vw"}, 1.7rem);
-
-    ul {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 1.75em;
-        
-    }
-
-    figure {
-        margin: 0;
-        margin-top: 5vw;
-
-        @include media-desktop {
-            margin: 0;
-        }
-    }
-    
-}
-*/
 
 .list-cours {
     display:flex;
@@ -101,6 +74,13 @@ body.home::after {
         padding: 15px 0;
         color: whitesmoke;
         letter-spacing: 2px;
+        
+    }
+
+    h1 p {
+        margin: 0;
+        padding: 0;
+        animation: texte-bouge 1.5s ease-in-out infinite alternate;
     }
 
     section {
@@ -176,5 +156,19 @@ body.home::after {
             }
         }
     } //Fin Section
+}
+
+@keyframes texte-bouge {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    50% {
+        color: rgb(202, 228, 195);
+    }
+
+    100% {
+        transform: translateX(100px);
+    }
 }
 
