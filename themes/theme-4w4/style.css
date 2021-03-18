@@ -1086,6 +1086,10 @@ menu tablette
 
 /* Local / Accueil
 --------------------------------------------- */
+#primary.site-main {
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -1484,10 +1488,27 @@ Bouton burger
 
 /* Local / Cours
 --------------------------------------------- */
-.site-main {
-  /*p{
-        margin-bottom: 0;
-        margin-left: 35px;
-    }*/
+.site-main p {
+  color: black;
+  text-align: center;
+}
+
+.site-main h4 {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+  width: 90vw;
+  background-color: gainsboro;
+  transition: 0.25s linear;
+  height: 30px;
+  align-items: center;
+}
+
+.site-main h4:hover {
+  height: 50px;
+  background-color: #d6fdcb;
+  font-size: 1.1rem;
+  letter-spacing: 8px;
 }
 /*# sourceMappingURL=style.css.map */
