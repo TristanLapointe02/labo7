@@ -684,16 +684,13 @@ body {
 		#colophon - .site-footer
 
 */
+/*
 .site-branding, #primary, #colophon {
-  margin-left: .5rem;
-}
-
-@media (min-width: 800px) {
-  .site-branding, #primary, #colophon {
-    margin-left: 3rem;
-  }
-}
-
+	margin-left: .5rem;
+	@include media-desktop {
+		margin-left: 3rem;
+	}
+}*/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
