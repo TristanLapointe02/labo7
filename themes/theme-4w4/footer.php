@@ -12,6 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		<!-- LE FOOTER A ÉTÉ SIMPLIÉ, EN ENLEVANT LE TEXTE PAR DÉFAUT -->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://cmaisonneuve.qc.ca', 'Collège de Maisonneuve' ) ); ?>">
 				<?php

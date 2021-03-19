@@ -18,6 +18,7 @@ get_header();
 			<section class="list-cours">
 				<?php
 				/* Start the Loop */
+				/* BOUCLE AFFICHANT LA LISTE DE COURS AVEC DIVERS INFORMATIONS */
 				$precedent = "XXXXXX";
 				while ( have_posts() ) :
 					the_post();

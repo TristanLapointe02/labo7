@@ -22,6 +22,7 @@ get_header();
 
 			<?php
 			/* Start the Loop */
+			/* AFFICHIER TOUTE LA LISTE DE COURS */
             $precedent = 0;
 			while ( have_posts() ) :
 				the_post();
