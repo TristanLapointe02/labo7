@@ -4,9 +4,7 @@ $largeur_burger : 2rem;
 $duree : .25s;
 $epaisseur : 5%;
 
-/*
-Bouton burger
-*/
+/* Style du bouton burger */
 
 #burger {
     display: block;
@@ -16,10 +14,12 @@ Bouton burger
     border-radius: 50%;
     overflow: hidden;
 
+    /* Enlever le bouton en grand écran */
     @include media-desktop {
         display: hidden;
     }
     
+    /* Les lignes du bouton burger */
     div {
         position: absolute;
         width: 100%;
@@ -132,7 +132,7 @@ Bouton burger
     animation: fermeX3 $duree both;
 }
 
-/* MENU EN DESSOUS DU BURGER */
+/* Animer le menu en dessous du bouton burger */
 
 @keyframes menuOuvrir {
     0% {

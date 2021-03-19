@@ -1,3 +1,5 @@
+/* Style de l'accueil */
+/* Conteneurs principaux */
 #primary.site-main {
     margin: 0;
 }
@@ -42,10 +44,7 @@ body.home::after {
     margin: 0;
 }
 
-#page {
-    //margin: 0 2rem 0 2rem;
-}
-
+/* Header de la page d'accueil */
 .entry-header h1 {
     margin-top: 2vw;
     margin-bottom: 0vw;
@@ -69,10 +68,12 @@ body.home::after {
     color: rgb(0, 51, 17);
 }
 
+/* Liste des cours de la page d'accueil */
 .list-cours {
     display:flex;
     flex-direction: column;
 
+    /* Titres */
     h1 {
         text-align: center;
         background-color: rgb(17, 19, 17);
@@ -85,7 +86,7 @@ body.home::after {
     h1 p {
         margin: 0;
         padding: 0;
-        animation: texte-bouge 2.5s ease-in-out infinite alternate;
+        animation: texte-bouge 2s ease-in-out infinite alternate;
     }
 
     section {
@@ -163,17 +164,18 @@ body.home::after {
     } //Fin Section
 }
 
+/* Animation des catégories des cours */
 @keyframes texte-bouge {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(-125px);
     }
 
     50% {
-        color: rgb(202, 228, 195);
+        color: rgb(231, 245, 227);
     }
 
     100% {
-        transform: translateX(100px);
+        transform: translateX(125px);
     }
 }
 

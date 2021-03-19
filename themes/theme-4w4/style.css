@@ -1091,6 +1091,8 @@ menu tablette
 
 /* Local / Accueil
 --------------------------------------------- */
+/* Style de l'accueil */
+/* Conteneurs principaux */
 #primary.site-main {
   margin: 0;
 }
@@ -1137,6 +1139,7 @@ body.home::after {
   margin: 0;
 }
 
+/* Header de la page d'accueil */
 .entry-header h1 {
   margin-top: 2vw;
   margin-bottom: 0vw;
@@ -1161,9 +1164,11 @@ body.home::after {
   color: #003311;
 }
 
+/* Liste des cours de la page d'accueil */
 .list-cours {
   display: flex;
   flex-direction: column;
+  /* Titres */
 }
 
 .list-cours h1 {
@@ -1177,7 +1182,7 @@ body.home::after {
 .list-cours h1 p {
   margin: 0;
   padding: 0;
-  animation: texte-bouge 2.5s ease-in-out infinite alternate;
+  animation: texte-bouge 2s ease-in-out infinite alternate;
 }
 
 .list-cours section {
@@ -1253,26 +1258,29 @@ body.home::after {
   background-color: #ca8ec8;
 }
 
+/* Animation des catégories des cours */
 @keyframes texte-bouge {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-125px);
   }
   50% {
-    color: #cae4c3;
+    color: #e7f5e3;
   }
   100% {
-    transform: translateX(100px);
+    transform: translateX(125px);
   }
 }
 
 /* Local / Carrousel
 --------------------------------------------- */
+/* Style du caroussel */
 .carrousel {
   z-index: -100;
   display: flex;
   width: 300vw;
   height: 20vh;
   transition: transform 0.5s cubic-bezier(0.58, 0.24, 0.86, 0.48);
+  /* Contenu réactifs */
 }
 
 .carrousel div {
@@ -1305,6 +1313,7 @@ body.home::after {
   animation: fond-adapater 2.5s ease-in-out infinite alternate;
 }
 
+/* Boutons contrôlant le caroussel */
 #boutonsSlider {
   z-index: 1;
   display: flex;
@@ -1338,6 +1347,7 @@ body.home::after {
   transform: scale(0.5);
 }
 
+/* Animation qui fait une belle animationa ambiante sur le caroussel */
 @keyframes fond-adapater {
   0% {
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
@@ -1355,9 +1365,7 @@ body.home::after {
 
 /* Local / Burger
 --------------------------------------------- */
-/*
-Bouton burger
-*/
+/* Style du bouton burger */
 #burger {
   display: block;
   position: relative;
@@ -1365,6 +1373,8 @@ Bouton burger
   height: 2rem;
   border-radius: 50%;
   overflow: hidden;
+  /* Enlever le bouton en grand écran */
+  /* Les lignes du bouton burger */
 }
 
 @media (min-width: 800px) {
@@ -1477,7 +1487,7 @@ Bouton burger
   animation: fermeX3 0.25s both;
 }
 
-/* MENU EN DESSOUS DU BURGER */
+/* Animer le menu en dessous du bouton burger */
 @keyframes menuOuvrir {
   0% {
     transform: scaleY(0);
@@ -1494,6 +1504,11 @@ Bouton burger
 
 /* Local / Cours
 --------------------------------------------- */
+/* Style de la liste de cours */
+.site-main {
+  /* Titre accessible avec la section ''Cours'' */
+}
+
 .site-main p {
   color: black;
   text-align: center;
