@@ -539,15 +539,15 @@ a:hover, a:active {
 }
 
 .main-navigation a {
-  color: #72dd57;
+  color: #ffffff;
 }
 
 .main-navigation a:visited {
-  color: #88ce7f;
+  color: #ffffff;
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
-  color: #c6f0bc;
+  color: #bfd4b9;
 }
 
 .main-navigation a:focus {
@@ -746,7 +746,7 @@ body {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: 0;
-  background-color: #00461b;
+  background-color: #003514;
 }
 
 .main-navigation ul li > a[href="#"]::after {
@@ -835,7 +835,7 @@ menu tablette
     position: absolute;
     width: 250px;
     height: auto;
-    background-color: #00461b;
+    background-color: black;
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
@@ -1317,7 +1317,7 @@ body.home::after {
 }
 
 #boutonsSlider button {
-  background-color: #15df4e;
+  background-color: #d6e2d9;
   margin: 1rem;
   border-radius: 200%;
   border: none;
@@ -1329,7 +1329,7 @@ body.home::after {
 }
 
 #boutonsSlider button:hover {
-  background-color: #79fa00;
+  background-color: #eef8e4;
   transform: scale(1.3);
   transition: transform .25s;
 }
@@ -1382,18 +1382,18 @@ Bouton burger
 
 #burger div:nth-of-type(1) {
   clip-path: polygon(0 15%, 100% 15%, 100% 25%, 0 25%);
-  background-color: #d0ff00;
+  background-color: black;
 }
 
 #burger div:nth-of-type(2) {
   clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-  background-color: lime;
+  background-color: #dfdfdf;
   z-index: -1;
 }
 
 #burger div:nth-of-type(3) {
   clip-path: polygon(0 75%, 100% 75%, 100% 85%, 0 85%);
-  background-color: #e5ff00;
+  background-color: black;
 }
 
 /* Animations de la première barre bar1 */

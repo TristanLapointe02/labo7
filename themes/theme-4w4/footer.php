@@ -22,7 +22,7 @@
 			<span class="sep"></span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Nom du thème: %1$s, réalisé par %2$s.', 'theme-4w4' ), 'theme-4w4', 'Tristan Lapointe');
+				printf( esc_html__( 'Nom du thème: %1$s, %2$s.', 'theme-4w4' ), 'theme-4w4', 'Tristan Lapointe');
 				?>
 			<a class="lien" href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/">TIM</a>
 		</div><!-- .site-info -->
