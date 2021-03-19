@@ -14,6 +14,15 @@ body {
 	}
 }
 
+.site-footer {
+	background-color: black;
+	font-size: 1.2rem;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	height: 10vh;
+
+}
+
 /* 
 	#page = .site
 		#masthead - .site-header
@@ -26,10 +35,4 @@ body {
 		#colophon - .site-footer
 
 */
-/*
-.site-branding, #primary, #colophon {
-	margin-left: .5rem;
-	@include media-desktop {
-		margin-left: 3rem;
-	}
-}*/
+
