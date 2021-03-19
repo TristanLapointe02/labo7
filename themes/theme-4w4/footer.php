@@ -22,9 +22,9 @@
 			<span class="sep"></span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Nom du thème: %1$s réalisé par %2$s.', 'theme-4w4' ), 'theme-4w4', '<a href="http://referenced.ca">Tristan Lapointe</a>');
+				printf( esc_html__( 'Nom du thème: %1$s, réalisé par %2$s.', 'theme-4w4' ), 'theme-4w4', 'Tristan Lapointe');
 				?>
-			<a href="https//cmaisonneuve.qc.ca">Collège de Maisonneuve</a>
+			<a class="lien" href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/">TIM</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
