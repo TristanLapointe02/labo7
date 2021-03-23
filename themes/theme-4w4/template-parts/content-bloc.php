@@ -11,6 +11,7 @@ global $tPropriété;
 ?>
 
 <article class="<?php echo $tPropriété['typeCours'] ?>">
+	<?php the_post_thumbnail( 'thumbnail' ); ?>
 	<a href="<?php echo get_permalink(); ?>"><?php echo $tPropriété['titre']; ?></a>
 	<p><?php echo $tPropriété['sigle'] . " - " . $tPropriété['nbHeure'] . " - " . $tPropriété['typeCours']; ?></p>
 	<p>Session : <?php echo $tPropriété['session']; ?></p>

@@ -1363,6 +1363,143 @@ body.home::after {
   }
 }
 
+/* Local / Carrousel-2
+--------------------------------------------- */
+/* Style du caroussel */
+.carrousel-2 {
+  z-index: -100;
+  display: flex;
+  width: 700vw;
+  height: 20vh;
+  transition: transform 0.5s cubic-bezier(0.58, 0.24, 0.86, 0.48);
+}
+
+.carrousel-2 .slide__conteneur {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(2.25rem, -0.875rem + 5.5vw, 4.5rem);
+  z-index: 10;
+  /* Contenu réactifs */
+  /* Fin du div */
+}
+
+.carrousel-2 .slide__conteneur .slide {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(2.25rem, -0.875rem + 5.5vw, 4.5rem);
+  z-index: 10;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(1) {
+  background-color: #d5e4d6;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(2) {
+  background-color: #aae285;
+}
+
+.carrousel-2 .slide__conteneur .slide:nth-of-type(3) {
+  background-color: #66cf5c;
+}
+
+.carrousel-2 .slide__conteneur .slide p {
+  margin: 0;
+  background-color: #222525;
+  width: 100%;
+  color: white;
+  text-align: center;
+  animation: fond-adapater 2.5s ease-in-out infinite alternate;
+}
+
+.carrousel-2 .slide__conteneur .slide img {
+  display: block;
+  margin: 2%;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info p {
+  font-size: .8rem;
+}
+
+.carrousel-2 .slide__conteneur .slide .slide__info a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.ctrl-carrousel {
+  background-color: #d5e4d6;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.ctrl-carrousel input {
+  margin: 1.8rem;
+  width: 15px;
+  height: 15px;
+}
+
+/* Boutons contrôlant le caroussel */
+#boutonsSlider {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background-color: #cbf7c0;
+  box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
+}
+
+#boutonsSlider button {
+  background-color: #d6e2d9;
+  margin: 1rem;
+  border-radius: 200%;
+  border: none;
+  padding: 1rem 1.25rem;
+}
+
+#boutonsSlider button:hover, #boutonsSlider button:focus {
+  outline: none;
+}
+
+#boutonsSlider button:hover {
+  background-color: #eef8e4;
+  transform: scale(1.3);
+  transition: transform .25s;
+}
+
+#boutonsSlider button:active {
+  transform: scale(0.5);
+}
+
+/* Animation qui fait une belle animationa ambiante sur le caroussel */
+@keyframes fond-adapater {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+  35% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  65% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+
 /* Local / Burger
 --------------------------------------------- */
 /* Style du bouton burger */
