@@ -9,6 +9,18 @@
 
 get_header();
 ?>
+
+	<section class="carrousel-2">
+		<div><p>Techniques</p></div>
+		<div><p>d'intégration</p></div>
+		<div><p>multimédia</p></div>
+	</section>
+	<div id="boutonsSlider">
+		<button id='un'>1</button>
+		<button id='deux'>2</button>
+		<button id='trois'>3</button>
+	</div>
+
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
@@ -22,27 +34,18 @@ get_header();
 				$precedent = "XXXXXX";
 				while ( have_posts() ) :
 					the_post();
-					$titre_grand = get_the_title();
-					$session = substr($titre_grand, 4, 1);
-					$nbHeure = substr($titre_grand, -4, 3);
-					$titre = substr($titre_grand, 8, -6);
-					$sigle = substr($titre_grand, 0, 7);
-					$typeCours = get_field('type_de_cours'); 
-					if ($precedent != $typeCours): ?>
+					
+					convertir_tableau($tPropriété);
+					if ($precedent != $tPropriété['typeCours']): ?>
 						<?php if($precedent != "XXXXXX"): ?>
-							</section>
+						</section>
 						<?php endif ?>
-						<h1><p><?php echo $typeCours ?></p></h1>
+						<h1><p><?php echo $tPropriété['typeCours'] ?></p></h1>
 					<section>
-						
 					<?php endif?>
-					<article class="<?php echo $typeCours ?>">
-						<a href="<?php echo get_permalink(); ?>"><?php echo $titre; ?></a>
-						<p><?php echo $sigle . " - " . $nbHeure . " - " . $typeCours; ?></p>
-						<p>Session : <?php echo $session; ?></p>
-					</article>
 				<?php 
-				$precedent = $typeCours;
+				get_template_part( 'template-parts/content', 'bloc' );
+				$precedent = $tPropriété['typeCours'];
 				endwhile; ?> 
 			</section>
 		<?php endif; ?>
@@ -52,3 +55,13 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
+function convertir_tableau(&$tPropriété) {
+	$titre_grand = get_the_title();
+	$tPropriété['session'] = substr($titre_grand, 4, 1);
+	$tPropriété['nbHeure'] = substr($titre_grand, -4, 3);
+	$tPropriété['titre'] = substr($titre_grand, 8, -6);
+	$tPropriété['sigle'] = substr($titre_grand, 0, 7);
+	$tPropriété['typeCours'] = get_field('type_de_cours'); 
+					
+}
