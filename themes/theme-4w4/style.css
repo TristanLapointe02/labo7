@@ -1387,7 +1387,7 @@ body.home::after {
 }
 
 .carrousel-2 .slide__conteneur .slide {
-  width: 90%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
