@@ -89,7 +89,7 @@ body.home::after {
         animation: texte-bouge 2s ease-in-out infinite alternate;
     }
 
-    section {
+    section.bloc {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

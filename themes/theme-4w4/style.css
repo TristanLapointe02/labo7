@@ -1185,14 +1185,14 @@ body.home::after {
   animation: texte-bouge 2s ease-in-out infinite alternate;
 }
 
-.list-cours section {
+.list-cours section.bloc {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.list-cours section article {
+.list-cours section.bloc article {
   background-color: #a3ce9a;
   display: flex;
   flex-direction: column;
@@ -1206,17 +1206,17 @@ body.home::after {
 }
 
 @media (min-width: 800px) {
-  .list-cours section article {
+  .list-cours section.bloc article {
     width: 30%;
   }
 }
 
-.list-cours section article p {
+.list-cours section.bloc article p {
   font-size: .9rem;
   font-weight: bold;
 }
 
-.list-cours section article a {
+.list-cours section.bloc article a {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -1226,35 +1226,35 @@ body.home::after {
   padding: 10px 0;
 }
 
-.list-cours section .Web {
+.list-cours section.bloc .Web {
   background-color: #b3c73f;
 }
 
-.list-cours section .Web a {
+.list-cours section.bloc .Web a {
   background-color: #9bac3d;
 }
 
-.list-cours section .Spécifique {
+.list-cours section.bloc .Spécifique {
   background-color: #e68e8e;
 }
 
-.list-cours section .Spécifique a {
+.list-cours section.bloc .Spécifique a {
   background-color: #c28686;
 }
 
-.list-cours section .Jeu {
+.list-cours section.bloc .Jeu {
   background-color: #caa256;
 }
 
-.list-cours section .Jeu a {
+.list-cours section.bloc .Jeu a {
   background-color: #cea966;
 }
 
-.list-cours section .Conception {
+.list-cours section.bloc .Conception {
   background-color: #e48ce1;
 }
 
-.list-cours section .Conception a {
+.list-cours section.bloc .Conception a {
   background-color: #ca8ec8;
 }
 
