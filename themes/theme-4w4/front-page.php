@@ -43,12 +43,12 @@ get_header();
 				</div>
 			</div>
 		</article>
-	</section> -->
+	</section> 
 	<section class="ctrl-carrousel">
 		<input type="radio" name="rad-carrousel">
 		<input type="radio" name="rad-carrousel">
 		<input type="radio" name="rad-carrousel">
-	</section>
+	</section>-->
 
 	<main id="primary" class="site-main">
 
@@ -70,13 +70,14 @@ get_header();
 							</section>
 						
 						<?php endif; ?>
-						<h1><p><?php echo $tPropriété['typeCours'] ?></p></h1>
-						<section <?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel-2"' : 'class="bloc"');?>>
-						<?php if($precedent = "Web"): ?>
+						<?php if($precedent == "Web"): ?>
 							<section class="ctrl-carrousel">
 								<?php echo $ctrl_radio?>
 							</section>
 						<?php endif; ?>
+						<h1><p><?php echo $tPropriété['typeCours'] ?></p></h1>
+						<section <?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel-2"' : 'class="bloc"');?>>
+						
 					<?php endif; ?>
 				<?php 
 				if($tPropriété['typeCours'] == "Web"): 
