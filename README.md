@@ -1,4 +1,4 @@
-Titre : LABO5. Cours en Techniques d'Intégration multimédia au Collège de Maisonneuve
+Titre : LABO5 ET LABO 6. Cours en Techniques d'Intégration multimédia au Collège de Maisonneuve
 
 Nom de l'auteur : Tristan Lapointe
 
@@ -8,4 +8,4 @@ Description du site : Ce site Web contient plusieurs informations concernant les
 
 Lien du répertoire Github : https://github.com/TristanLapointe02/labo6
 
-Lien du site sur WEBDEV : https://e1995593.webdev.cmaisonneuve.qc.ca/design/projetsession/
+Lien du site sur WEBDEV : https://e1995593.webdev.cmaisonneuve.qc.ca/design/blog/
