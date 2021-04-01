@@ -7,7 +7,6 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: rgb(8, 85, 55);
 		position: absolute;
 		width: 100%;
 
@@ -18,7 +17,6 @@
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
-			background-color: rgb(0, 70, 27);
 
 			ul {
 				left: -999em;
@@ -130,7 +128,7 @@
 		justify-content: space-around;
 		align-items: center;
 		position: static;
-		width: 100vw;
+		width:100vw;
 		margin: 0;
 		padding: 0;
 		border: 1px solid black;

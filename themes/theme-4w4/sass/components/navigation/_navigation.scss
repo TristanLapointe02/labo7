@@ -22,7 +22,8 @@
 			background-color: rgb(0, 70, 27);
 			position: absolute;
 			top: 100%;	
-			transition: left .3s;
+			transition: left 0.8s;
+			transition-timing-function: cubic-bezier(0,1.1,.95,1);
 			left: -999em;
 			z-index: 99999;
 			
@@ -124,6 +125,11 @@ menu tablette
 	
 	.menu-toggle {
 		display: none;
+	}
+
+	.main-navigation ul {
+		padding-left: 13%;
+		padding-right: 15%;	
 	}
 	.main-navigation.toggled ul,
 	.main-navigation ul {

@@ -733,7 +733,8 @@ body {
   background-color: #00461b;
   position: absolute;
   top: 100%;
-  transition: left .3s;
+  transition: left 0.8s;
+  transition-timing-function: cubic-bezier(0, 1.1, 0.95, 1);
   left: -999em;
   z-index: 99999;
 }
@@ -818,6 +819,10 @@ menu tablette
   }
   .menu-toggle {
     display: none;
+  }
+  .main-navigation ul {
+    padding-left: 13%;
+    padding-right: 15%;
   }
   .main-navigation.toggled ul,
   .main-navigation ul {
@@ -1173,7 +1178,7 @@ body.home::after {
 
 .list-cours h1 {
   text-align: center;
-  background-color: #111311;
+  background-color: black;
   padding: 15px 0;
   color: whitesmoke;
   letter-spacing: 2px;
@@ -1182,7 +1187,7 @@ body.home::after {
 .list-cours h1 p {
   margin: 0;
   padding: 0;
-  animation: texte-bouge 2s ease-in-out infinite alternate;
+  animation: texte-bouge 3s ease-in-out infinite alternate;
 }
 
 .list-cours section.bloc {
@@ -1199,6 +1204,7 @@ body.home::after {
   justify-content: space-between;
   align-items: center;
   width: 85%;
+  transition: 0.5s ease;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -1224,6 +1230,16 @@ body.home::after {
   background-color: #9abe92;
   width: 100%;
   padding: 10px 0;
+}
+
+.list-cours section.bloc article:hover {
+  transform: scale(1.05);
+  background-color: #e4e4e4;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+  -webkit-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
+  -moz-box-shadow: 0px 0px 19px -1px rgba(0, 0, 0, 0.81);
 }
 
 .list-cours section.bloc .Web {
@@ -1256,19 +1272,6 @@ body.home::after {
 
 .list-cours section.bloc .Conception a {
   background-color: #ca8ec8;
-}
-
-/* Animation des catégories des cours */
-@keyframes texte-bouge {
-  0% {
-    transform: translateX(-125px);
-  }
-  50% {
-    color: #e7f5e3;
-  }
-  100% {
-    transform: translateX(125px);
-  }
 }
 
 /* Local / Carrousel
@@ -1310,13 +1313,14 @@ body.home::after {
   width: 100%;
   color: white;
   text-align: center;
-  animation: fond-adapater 2.5s ease-in-out infinite alternate;
 }
 
 /* Boutons contrôlant le caroussel */
 #boutonsSlider {
   z-index: 1;
   display: flex;
+  align-items: center;
+  height: 5vh;
   justify-content: center;
   width: 100vw;
   background-color: #cbf7c0;
@@ -1325,12 +1329,17 @@ body.home::after {
   -moz-box-shadow: 1px -1px 43px 3px rgba(0, 0, 0, 0.49);
 }
 
-#boutonsSlider button {
-  background-color: #d6e2d9;
+#boutonsSlider input {
+  width: 20px;
+  height: 20px;
   margin: 1rem;
-  border-radius: 200%;
   border: none;
   padding: 1rem 1.25rem;
+  transition: 0.8s ease;
+}
+
+#boutonsSlider input:focus {
+  transform: scale(1.1) rotate3d(0, 1, 0, 180deg);
 }
 
 #boutonsSlider button:hover, #boutonsSlider button:focus {
@@ -1370,7 +1379,7 @@ body.home::after {
   z-index: -100;
   display: flex;
   width: 600vw;
-  height: 20vh;
+  height: 30vh;
   transition: transform 0.5s cubic-bezier(0.58, 0.24, 0.86, 0.48);
   flex-wrap: nowrap;
 }
@@ -1387,7 +1396,8 @@ body.home::after {
 }
 
 .carrousel-2 .slide__conteneur .slide {
-  width: 80%;
+  width: 90%;
+  height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1422,20 +1432,42 @@ body.home::after {
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info {
-  margin: 2%;
+  width: 30%;
+  margin: 1%;
+  height: 15vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info p {
   font-size: .8rem;
+  animation: fond-adapater 2.5s ease-in-out infinite alternate;
 }
 
 .carrousel-2 .slide__conteneur .slide .slide__info a {
   font-size: 1.5rem;
   text-decoration: none;
+}
+
+/* Animation des catégories des cours */
+@keyframes texte-bouge {
+  0% {
+    transform: translateX(-50px);
+  }
+  15% {
+    color: #e7f5e3;
+  }
+  50% {
+    color: #e7f5e3;
+  }
+  85% {
+    color: #e7f5e3;
+  }
+  100% {
+    transform: translateX(50px);
+  }
 }
 
 .ctrl-carrousel {
@@ -1478,7 +1510,7 @@ body.home::after {
 #boutonsSlider button:hover {
   background-color: #eef8e4;
   transform: scale(1.3);
-  transition: transform .25s;
+  transition: transform .5s;
 }
 
 #boutonsSlider button:active {

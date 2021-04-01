@@ -31,7 +31,7 @@
             width: 100%;
             color: white;
             text-align: center;
-            animation: fond-adapater 2.5s ease-in-out infinite alternate;
+            
         }
     }
 
@@ -41,6 +41,8 @@
 #boutonsSlider {
     z-index: 1;
     display: flex;
+    align-items: center;
+    height: 5vh;
     justify-content: center;
     width: 100vw;
     background-color: rgb(203, 247, 192);
@@ -50,12 +52,18 @@
     
 }
 
-#boutonsSlider button{
-    background-color: rgb(214, 226, 217);
+#boutonsSlider input{
+    width: 20px;
+    height: 20px;
     margin: 1rem;
-    border-radius: 200%;
     border: none;
     padding: 1rem 1.25rem;
+    transition: 0.8s ease;
+}
+
+#boutonsSlider input:focus{
+    
+    transform: scale(1.1) rotate3d(0,1,0,180deg);
 }
 
 #boutonsSlider button:hover, #boutonsSlider button:focus {

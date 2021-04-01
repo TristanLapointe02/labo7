@@ -76,7 +76,7 @@ body.home::after {
     /* Titres */
     h1 {
         text-align: center;
-        background-color: rgb(17, 19, 17);
+        background-color: rgb(0, 0, 0);
         padding: 15px 0;
         color: whitesmoke;
         letter-spacing: 2px;
@@ -86,7 +86,7 @@ body.home::after {
     h1 p {
         margin: 0;
         padding: 0;
-        animation: texte-bouge 2s ease-in-out infinite alternate;
+        animation: texte-bouge 3s ease-in-out infinite alternate;
     }
 
     section.bloc {
@@ -102,6 +102,7 @@ body.home::after {
             justify-content: space-between;
             align-items: center;
             width: 85%;
+            transition: 0.5s ease;
             @include media-desktop {
                 width: 30%;
             }
@@ -124,6 +125,16 @@ body.home::after {
                 padding: 10px 0;
             }
         } //Fin Article
+
+        article:hover {
+            transform: scale(1.05);
+            background-color: rgb(228, 228, 228);
+            border-bottom-left-radius: 10%;
+            border-bottom-right-radius: 10%;
+            box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.81);
+            -webkit-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.81);
+            -moz-box-shadow: 0px 0px 19px -1px rgba(0,0,0,0.81);
+        }
 
         // Type de cours - Changement de style
         .Web {
@@ -164,18 +175,5 @@ body.home::after {
     } //Fin Section
 }
 
-/* Animation des catégories des cours */
-@keyframes texte-bouge {
-    0% {
-        transform: translateX(-125px);
-    }
 
-    50% {
-        color: rgb(231, 245, 227);
-    }
-
-    100% {
-        transform: translateX(125px);
-    }
-}
 

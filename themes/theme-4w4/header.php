@@ -75,9 +75,9 @@
 			<div><p>multimédia</p></div>
 		</section>
 		<div id="boutonsSlider">
-			<button id='un'>1</button>
-			<button id='deux'>2</button>
-			<button id='trois'>3</button>
+		<input type="radio" name="bouton" id="un" checked>
+		<input type="radio" name="bouton" id="deux">
+		<input type="radio" name="bouton" id="trois">
 		</div>
 		
 		<?php
