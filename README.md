@@ -6,6 +6,6 @@ Groupe : Mardi gr-1
 
 Description du site : Ce site Web contient plusieurs informations concernant les cours du programme TIM. Il contient plusieurs éléments animés, tels qu'un caroussel, un bouton burger, et autres.
 
-Lien du répertoire Github : https://github.com/TristanLapointe02/labo5
+Lien du répertoire Github : https://github.com/TristanLapointe02/labo6
 
 Lien du site sur WEBDEV : https://e1995593.webdev.cmaisonneuve.qc.ca/design/projetsession/
