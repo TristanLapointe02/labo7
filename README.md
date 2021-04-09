@@ -1,4 +1,4 @@
-Titre : LABO5 ET LABO 6. Cours en Techniques d'Intégration multimédia au Collège de Maisonneuve
+Titre : LABO 7. Cours en Techniques d'Intégration multimédia au Collège de Maisonneuve
 
 Nom de l'auteur : Tristan Lapointe
 
