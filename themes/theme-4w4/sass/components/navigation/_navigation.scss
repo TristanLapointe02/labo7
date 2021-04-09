@@ -1,3 +1,5 @@
+/* Navigation */
+/* BON THÈME */
 .main-navigation {
 	display: block;
 	width: 100vw;	
@@ -128,28 +130,39 @@ menu tablette
 	}
 
 	.main-navigation ul {
-		padding-left: 13%;
-		padding-right: 15%;	
+		padding-left: 5%;
+		padding-right: 3%;	
 	}
 	.main-navigation.toggled ul,
 	.main-navigation ul {
 		display: flex;
-		position : static;
 		justify-content: space-around;
 		a[href="#"]::after {
 			display: none;
 		}
-		li:hover ul {
-			display: block;
-			position: absolute;
+		li:hover ul { /* Sous menu */
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
 			width: 250px;
-			height: auto;
 			background-color: rgb(0, 0, 0);
+			animation: anim-sous-menu .25s both cubic-bezier(0,.67,.42,.99);
 		}
 		ul {
 			display: none;
 		}
-		
+	}
+}
+
+@keyframes anim-sous-menu {
+	0% {
+		opacity: 0;
+		transform: translateX(0) translateY(100px) scaleX(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0) translateY(0px) scaleX(1);
 	}
 }
 

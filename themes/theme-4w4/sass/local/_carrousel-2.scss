@@ -1,19 +1,55 @@
 /* Style du caroussel */
-.carrousel-2 {
+.carrousel {
     z-index: -100;
     display: flex;
-    width: 600vw;
-    height: 30vh;
+    width: 300vw;
+    height: 25vh;
     transition: transform .5s cubic-bezier(.58,.24,.86,.48);
-    flex-wrap: nowrap;
-    .slide__conteneur {
+
+    /* Contenu réactifs */
+    div {
+        height: 25vh;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: clamp(2.25rem, #{"-0.875rem + 5.5vw"}, 4.5rem);
         z-index: 10;
+    &:nth-of-type(1) {
+        background-color: rgb(213, 228, 214);
+    }
+    &:nth-of-type(2) {
+        background-color: rgb(170, 226, 133);
+    }
+    &:nth-of-type(3) {
+        background-color: rgb(102, 207, 92);
+    }
+
+    p {
+        margin: 0;
+        background-color: rgb(34, 37, 37);
+        width: 100%;
+        color: white;
+        text-align: center;
         
+    }
+}
+}
+
+.carrousel-2 {
+    z-index: -100;
+    display: flex;
+    width: 300vw;
+    height: 30vh;
+    transition: transform .5s cubic-bezier(.58,.24,.86,.48);
+    flex-wrap: nowrap;
+    .slide__conteneur {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(2.25rem, #{"-0.875rem + 5.5vw"}, 4.5rem);
+        z-index: 10;
 
             /* Contenu réactifs */
             .slide {
@@ -99,6 +135,15 @@
         margin: 1.8rem;
         width: 15px;
         height: 15px;
+        &:nth-of-type(4) {
+            display: none;
+        }
+        &:nth-of-type(5) {
+            display: none;
+        }
+        &:nth-of-type(6) {
+            display: none;
+        }
     }
 }
 
@@ -108,7 +153,9 @@
 /* Boutons contrôlant le caroussel */
 #boutonsSlider {
     z-index: 1;
+    height: 5vh;
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100vw;
     background-color: rgb(203, 247, 192);
@@ -118,7 +165,7 @@
     
 }
 
-#boutonsSlider button{
+#boutonsSlider input{
     background-color: rgb(214, 226, 217);
     margin: 1rem;
     border-radius: 200%;
